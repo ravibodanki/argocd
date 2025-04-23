@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: fbcont1
-          image: ravibodanki/dockerproject1:tomcat
+          image: devopshubg333/batch15d:python_flaskapp
           ports:
             - containerPort: 80
           
