@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: fbcont1
-          image: tomcat
+          image: ravibodanki/dockerproject1:tomcat
           ports:
             - containerPort: 80
           
