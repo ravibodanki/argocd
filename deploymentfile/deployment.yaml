@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fb-deploy
+  labels:
+    app: facebook
+    env: lab
+
+spec:
+  selector:
+    matchLabels:
+      app: facebook
+  replicas: 3
+  template:
+    metadata:
+      name: facepod
+      labels:
+        app: facebook
+        env: lab
+        version: AC_V1
+
+    spec:
+      containers:
+        - name: fbcont1
+          image: tomcat
+          ports:
+            - containerPort: 80
+          
